@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+//Yun Lin
 class Fraction {
 public:
   
@@ -14,8 +14,8 @@ public:
     void print();
 
 private:
-    int dominator;
-    int numniator;
+    int numerator ;
+    int denominator;
 };
 
 int main()
@@ -123,41 +123,41 @@ int main()
 
 
 
-void Fraction::set(int a, int b) { dominator = a, numniator = b; }
+void Fraction::set(int a, int b) { numerator  = a, denominator = b; }
 
 Fraction Fraction::multipliedBy(Fraction a) {
     Fraction result;
-    result.dominator = dominator*a.dominator;
-    result.numniator = numniator * a.numniator;
+    result.numerator  = numerator *a.numerator ;
+    result.denominator = denominator * a.denominator;
     return result;
 }
 Fraction Fraction::dividedBy(Fraction a) {
     Fraction result;
-    result.dominator = dominator * a.numniator;
-    result.numniator = numniator * a.dominator;
+    result.numerator  = numerator  * a.denominator;
+    result.denominator = denominator * a.numerator ;
     return result;
 
 }
 Fraction Fraction::addedTo(Fraction a) {
     Fraction result;
-    result.dominator = dominator * a.numniator + a.dominator * numniator;
-    result.numniator= numniator *a.numniator;
+    result.numerator  = numerator  * a.denominator + a.numerator  * denominator;
+    result.denominator= denominator *a.denominator;
     return result;
 }
 
 
 Fraction Fraction::subtract(Fraction a) {
     Fraction result;
-    result.dominator = dominator * a.numniator - a.dominator * numniator;
-    result.numniator = numniator * a.numniator;
+    result.numerator  = numerator  * a.numerator  - a.numerator  * denominator;
+    result.denominator = denominator * a.denominator;
     return result;
 }
 bool Fraction::isEqualTo(Fraction a){
-    if (dominator == a.dominator || numniator == a.numniator) {
+    if (dominator == a.numerator  || numniator == a.denominator) {
         return true;
       }
     return false;
 }
 void Fraction::print() {
-    cout << dominator << "/" << numniator;
+    cout << numerator  << "/" << denominator;
 }
