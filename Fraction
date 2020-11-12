@@ -152,12 +152,12 @@ Fraction Fraction::subtract(Fraction a) {
     result.denominator = denominator * a.denominator;
     return result;
 }
-bool Fraction::isEqualTo(Fraction a){
-    if (dominator == a.numerator  || numniator == a.denominator) {
+bool Fraction::isEqualTo(Fraction a) {
+    if (numerator == a.numerator || denominator == a.denominator) {
         return true;
-      }
+    }
     return false;
 }
 void Fraction::print() {
-    cout << numerator  << "/" << denominator;
+    cout << numerator << "/" << denominator;
 }
